@@ -1,0 +1,26 @@
+@startuml ism
+
+actor "Квартиросъемщик" as Tenant
+actor "Владелец" as Owner
+
+package "Система Жилищного Агентства" {
+  usecase "Поиск жилья" as UC1
+  usecase "Просмотр информации о жилье" as UC2
+  usecase "Связь с владельцем" as UC3
+  usecase "Бронирование жилья" as UC4
+  usecase "Оплата" as UC5
+  usecase "Публикация объявления" as UC6
+  usecase "Управление объявлениями" as UC7
+  usecase "Общение с квартиросъемщиками" as UC8
+}
+
+Tenant --> UC1
+Tenant --> UC2
+Tenant --> UC3
+Tenant --> UC4
+Tenant --> UC5
+Owner --> UC6
+Owner --> UC7
+Owner --> UC8
+
+@enduml
